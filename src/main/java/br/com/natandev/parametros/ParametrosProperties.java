@@ -1,6 +1,7 @@
 package br.com.natandev.parametros;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.validation.annotation.Validated;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
@@ -9,6 +10,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
+@Validated
 @ConfigurationProperties(prefix = "environments")
 public class ParametrosProperties {
 
