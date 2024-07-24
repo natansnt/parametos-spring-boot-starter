@@ -1,6 +1,8 @@
 package br.com.natandev.parametros;
 
 import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
@@ -9,6 +11,7 @@ import br.com.natandev.parametros.managers.ParametroManager;
 import jakarta.persistence.EntityManager;
 
 @AutoConfiguration
+@AutoConfigureAfter(HibernateJpaAutoConfiguration.class)
 @EnableConfigurationProperties(ParametrosProperties.class)
 public class ParametrosAutoConfiguration {
 
